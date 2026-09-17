@@ -1,0 +1,257 @@
+@charset "UTF-8";
+/* =========================================================================
+   ビオ接骨院 小牧院 育毛LP — 別案（空色パステル・ライト版）
+   「1トピック＝大きく・少ない文字・強弱」＋ 明るい水色トーン
+   ========================================================================= */
+:root{
+  --navy1:#e6f6fd; --navy2:#bfe9f7;      /* 淡い水色寄りパステル（青みを少し抑えて） */
+  --gold:#c79544; --gold-lt:#c79544;
+  --cream:#ffffff; --beige:#e3f3fc;
+  --ink:#173a5b; --body:#45586b; --muted:#8fa0b2;
+  --sky:#12a3ec;                          /* クリアで鮮やかな空色アクセント */
+  --line:#06c755; --line-dk:#05a648;
+  --hpb1:#ee5c7d; --hpb2:#e5476b; --hpb3:#d5395c;
+  --serif:"Noto Serif JP",serif; --sans:"Noto Sans JP",sans-serif;
+  --wrap:640px; --pad:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);color:var(--body);background:#fff;
+  line-height:1.85;-webkit-font-smoothing:antialiased;padding-bottom:78px;}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad);}
+.page{background:#fff;}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-weight:700;border-radius:999px;text-decoration:none;
+  transition:transform .12s ease,filter .12s ease,box-shadow .12s ease;}
+.btn .arw{font-size:1.1em;opacity:.9}
+.btn--line{background:linear-gradient(180deg,#18cf62,var(--line) 60%,var(--line-dk));
+  color:#fff;width:100%;padding:17px 24px;font-size:clamp(16px,4.3vw,19px);
+  letter-spacing:.03em;box-shadow:0 10px 22px rgba(6,199,85,.30);}
+.btn--hpb{background:linear-gradient(180deg,var(--hpb1),var(--hpb2) 55%,var(--hpb3));
+  color:#fff;width:100%;padding:16px 20px;font-size:clamp(14px,3.7vw,17px);
+  letter-spacing:.02em;box-shadow:0 10px 22px rgba(213,57,92,.26);margin-top:12px;}
+.btn--sm{width:auto;padding:9px 16px;font-size:13px;box-shadow:0 6px 14px rgba(6,199,85,.30);}
+.btn:hover{filter:brightness(1.04);transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.cta{margin-top:28px}
+
+/* ---------- Header ---------- */
+.hd{position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;
+  gap:12px;background:#fff;border-bottom:1px solid #e6eef5;padding:11px var(--pad);}
+.hd__name{font-family:var(--serif);font-weight:700;font-size:clamp(16px,4.6vw,20px);color:var(--ink);display:block;}
+.hd__sub{font-size:10px;letter-spacing:.13em;color:var(--sky);display:block;margin-top:2px;}
+.hd__brand{min-width:0;}
+.hd__btns{display:flex;gap:6px;flex:none;}
+.hd__btns .btn{margin:0;padding:8px 10px;font-size:11.5px;box-shadow:none;letter-spacing:0;}
+
+/* ---------- Section base（強弱：たっぷり余白＋特大見出し） ---------- */
+.sec{padding:clamp(56px,15vw,104px) 0;}
+.sec--cream{background:var(--cream);}
+.sec--white{background:#fff;}
+.sec--navy{background:linear-gradient(160deg,var(--navy1),var(--navy2));color:var(--ink);}
+.eyebrow{font-weight:700;font-size:12px;letter-spacing:.24em;color:var(--sky);text-align:center;margin:0 0 16px;}
+.eyebrow--light{color:var(--sky);}
+.sec__h{font-family:var(--serif);font-weight:700;text-align:center;color:var(--ink);
+  font-size:clamp(27px,7.6vw,42px);line-height:1.45;letter-spacing:.01em;margin:0;}
+.sec__h--light{color:var(--ink);}
+.hl{color:var(--gold);}
+.sec--navy .hl,.hero .hl,.sec__h--light .hl{color:var(--gold);}
+.sec__lead{text-align:center;margin:28px 0 0;font-size:clamp(15px,4vw,17px);line-height:1.95;color:var(--body);}
+.sec__lead b{color:var(--ink);font-weight:700;}
+.sec__lead--light{color:var(--body);}
+.sec__lead--light b{color:var(--ink);}
+.sec__lead b.hl,.sec__lead--light b.hl{color:var(--gold);}
+.note{text-align:center;margin:18px 0 0;font-size:11px;color:var(--muted);}
+.sec--navy .note{color:var(--muted);}
+
+/* ---------- Hero ---------- */
+.hero{background:linear-gradient(160deg,var(--navy1),var(--navy2));color:var(--ink);
+  padding:clamp(38px,10vw,64px) 0 clamp(44px,11vw,72px);text-align:center;}
+.hero__h{font-family:var(--serif);font-weight:700;font-size:clamp(33px,10vw,56px);
+  line-height:1.4;margin:8px 0 0;letter-spacing:.02em;color:var(--ink);}
+.hero__lead{margin:20px 0 0;color:var(--body);font-size:clamp(15px,4vw,17px);line-height:1.9;}
+.hero__img{margin:30px 0 0;border-radius:14px;overflow:hidden;aspect-ratio:16/11;
+  box-shadow:0 18px 42px rgba(23,80,130,.28);}
+.hero__img img{width:100%;height:100%;object-fit:cover;}
+.hero__proof{margin:24px 0 0;font-size:14px;letter-spacing:.08em;color:var(--body);}
+.hero__proof b{font-family:var(--serif);font-size:1.75em;color:var(--gold);margin:0 .12em;}
+
+/* ---------- 副作用ゼロ ---------- */
+.zeros{display:flex;justify-content:center;gap:clamp(24px,10vw,64px);margin:36px 0 0;}
+.zero{display:flex;flex-direction:column;align-items:center;}
+.zero__l{font-weight:700;font-size:clamp(14px,4vw,17px);color:var(--ink);letter-spacing:.04em;margin:0 0 2px;}
+.zero__n{font-family:var(--serif);font-weight:700;font-size:clamp(62px,19vw,104px);line-height:1;color:var(--gold);}
+
+/* ---------- 薄毛の原因（アイコン＋説明のリスト） ---------- */
+.causelist{display:grid;gap:12px;margin:30px 0 0;}
+.cause{display:flex;align-items:center;gap:15px;background:#fff;
+  border:1px solid #cbe8f8;border-radius:15px;padding:16px 17px;box-shadow:0 8px 20px rgba(23,80,130,.12);}
+.cause__ico{flex:none;width:62px;height:62px;border-radius:50%;background:#eef8fe;border:1px solid #d5edfb;display:flex;align-items:center;justify-content:center;}
+.cause__ico img{width:38px;height:38px;object-fit:contain;}
+.cause__b b{display:block;font-size:clamp(15px,4.3vw,18px);color:var(--ink);}
+.cause__b p{margin:5px 0 0;font-size:13px;color:var(--body);line-height:1.75;}
+
+/* ---------- ヘアサイクル ---------- */
+.cycle{display:flex;align-items:flex-start;justify-content:center;gap:4px;margin:34px 0 0;}
+.cycle__c{flex:1 1 0;max-width:118px;display:flex;flex-direction:column;align-items:center;text-align:center;}
+.cycle__c img{width:clamp(54px,16vw,78px);height:auto;margin:0 auto 8px;}
+.cycle__c b{display:block;font-size:clamp(13px,3.7vw,16px);color:var(--ink);}
+.cycle__dur{background:var(--gold);color:#fff;font-size:10px;font-weight:700;border-radius:5px;padding:2px 8px;margin:4px 0 3px;}
+.cycle__c span{font-size:11px;color:var(--body);}
+.cycle__arw{flex:none;color:var(--sky);font-weight:800;font-size:20px;align-self:center;margin-top:-26px;}
+/* 解説ボックス（乱れると…） */
+.callout{margin:26px 0 0;background:#fff;border:1px solid #cbe8f8;border-left:4px solid var(--gold);
+  border-radius:10px;padding:16px 18px;text-align:left;box-shadow:0 6px 16px rgba(23,80,130,.12);}
+.callout p{margin:0;font-size:clamp(13.5px,3.7vw,15px);line-height:1.85;color:var(--body);}
+.callout b{color:var(--ink);}
+
+/* ---------- BIO METHOD ---------- */
+.method{margin:32px 0 0;display:grid;gap:14px;}
+.method__row{display:flex;align-items:center;gap:16px;background:#fff;
+  border:1px solid #cbe8f8;border-radius:16px;padding:18px;box-shadow:0 8px 20px rgba(23,80,130,.12);}
+.method__ico{flex:none;width:108px;height:108px;display:flex;align-items:center;justify-content:center;}
+.method__ico img{width:108px;height:108px;object-fit:contain;}
+.method__tag{display:inline-block;background:var(--sky);color:#fff;font-size:11px;font-weight:700;
+  letter-spacing:.1em;border-radius:6px;padding:2px 10px;margin-bottom:7px;}
+.method__tag--out{background:var(--gold);}
+/* 違い（終わりのある施術）比較カード */
+.compare{display:grid;gap:14px;margin:32px 0 0;}
+.cmp{border-radius:16px;padding:22px 18px;text-align:center;}
+.cmp--x{background:#eef1f5;border:1px solid #e0e5ec;}
+.cmp--o{background:#fff;border:2px solid var(--sky);box-shadow:0 12px 30px rgba(23,80,130,.14);}
+.cmp__mark{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;font-size:22px;font-weight:800;margin-bottom:12px;}
+.cmp--x .cmp__mark{background:#dfe4ea;color:#96a1b0;}
+.cmp--o .cmp__mark{background:#e6f6fd;color:var(--sky);}
+.cmp>b{display:block;font-size:clamp(16px,4.4vw,19px);color:var(--ink);}
+.cmp--x>b{color:#7c8797;}
+.cmp p{margin:9px 0 0;font-size:13.5px;line-height:1.85;color:var(--body);}
+.cmp p b{color:var(--ink);font-weight:700;}
+.cmp--x p b{color:#7c8797;}
+.cmp--o p b{color:var(--sky);}
+/* 終わりのある施術：比較グラフ */
+.endgraph{margin:30px 0 0;background:#fff;border:1px solid #cbe8f8;border-radius:16px;padding:20px 16px 18px;box-shadow:0 10px 26px rgba(23,80,130,.10);}
+.endgraph__legend{display:flex;justify-content:center;gap:20px;font-size:12px;font-weight:700;color:var(--ink);}
+.endgraph__legend .lg{display:inline-block;width:16px;height:4px;border-radius:2px;margin-right:6px;vertical-align:middle;}
+.lg--x{background:#e8542a;}
+.lg--o{background:#12a3ec;}
+.endgraph svg{display:block;width:100%;height:auto;margin-top:10px;}
+.endgraph__note{margin:12px 0 0;text-align:center;font-size:13px;color:var(--body);line-height:1.8;}
+.endgraph__note b{color:var(--ink);}
+/* 対応エリア タグ */
+.area-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:30px 0 4px;}
+.area-tags span{background:#fff;border:1px solid #cbe8f8;border-radius:999px;padding:8px 15px;font-size:13px;font-weight:700;color:var(--ink);box-shadow:0 4px 12px rgba(23,80,130,.10);}
+/* 対応エリア画像（吹き出し＋マップ） */
+.area-img{margin:24px 0 0;border-radius:18px;overflow:hidden;box-shadow:0 12px 28px rgba(23,80,130,.10);}
+.area-img img{width:100%;height:auto;display:block;}
+.method__txt b{display:block;font-size:clamp(15px,4.2vw,18px);color:var(--ink);}
+.method__txt p{margin:6px 0 0;font-size:13px;color:var(--body);line-height:1.7;}
+.method-fig{margin:28px auto 0;max-width:340px;}
+.method-fig img{width:100%;height:auto;display:block;}
+
+/* ---------- 実績 Before/After ---------- */
+.ba-set{display:grid;gap:18px;margin:34px 0 0;}
+.ba{margin:0;background:#fff;border-radius:16px;box-shadow:0 12px 28px rgba(23,80,130,.10);overflow:hidden;}
+.ba__pair{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;}
+.ba__ph{position:relative;aspect-ratio:1/1;overflow:hidden;}
+.ba__ph img{width:100%;height:100%;object-fit:cover;}
+.ba__lbl{position:absolute;left:0;bottom:0;background:rgba(23,58,91,.88);color:#fff;
+  font-size:11px;font-weight:700;letter-spacing:.08em;padding:3px 10px;}
+.ba__lbl--a{background:rgba(199,149,68,.96);}
+.ba__ar{color:var(--sky);font-weight:800;font-size:22px;padding:0 5px;}
+.ba__cap{padding:13px 14px;font-size:14px;color:var(--ink);font-weight:500;text-align:center;}
+.ba__cap b{color:var(--gold);font-weight:700;}
+.big-num{font-family:var(--serif);font-weight:700;color:var(--gold);
+  font-size:clamp(52px,15vw,86px);line-height:1;letter-spacing:.01em;}
+.big-unit{font-family:var(--serif);font-weight:700;color:var(--ink);font-size:clamp(20px,5.2vw,26px);}
+/* ビフォーアフター 実例（3件） */
+.ba-set2{display:grid;gap:16px;margin:30px 0 0;}
+.ba-item{border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(23,80,130,.12);background:#fff;}
+.ba-item img{width:100%;height:auto;display:block;}
+
+/* ---------- 施術の流れ（写真カード） ---------- */
+.flow{list-style:none;margin:34px 0 0;padding:0;display:grid;gap:16px;}
+.flowc{background:#fff;border:1px solid #cbe8f8;border-radius:16px;overflow:hidden;box-shadow:0 8px 20px rgba(23,80,130,.12);}
+.flowc__img{position:relative;aspect-ratio:16/10;background:#dceefb;}
+.flowc__img img{width:100%;height:100%;object-fit:cover;}
+.flowc__img--contain{aspect-ratio:auto;background:#fff;}
+.flowc__img--contain img{height:auto;display:block;}
+.flowc__n{position:absolute;top:12px;left:12px;width:42px;height:42px;border-radius:50%;background:var(--gold);color:#fff;
+  font-family:var(--serif);font-weight:700;font-size:21px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(23,58,91,.35);}
+.flowc__b{padding:15px 18px 17px;}
+.flowc__b b{display:block;font-size:clamp(16px,4.4vw,18px);color:var(--ink);}
+.flowc__b p{margin:5px 0 0;font-size:13.5px;color:var(--body);line-height:1.7;}
+/* 安心（相談風景の写真つき） */
+.reassure{margin:26px 0 0;background:#fff;border-radius:18px;padding:24px 20px 26px;text-align:center;box-shadow:0 12px 28px rgba(23,80,130,.12);}
+.reassure__img{width:min(240px,72%);margin:0 auto 18px;border-radius:14px;overflow:hidden;}
+.reassure__img img{width:100%;height:auto;display:block;}
+.reassure__lead{font-family:var(--serif);font-weight:700;font-size:clamp(18px,5vw,23px);color:var(--ink);margin:0 0 10px;}
+.reassure__txt{font-size:clamp(14px,3.8vw,15px);color:var(--body);line-height:1.9;margin:0;}
+
+/* ---------- 料金 ---------- */
+.price{display:flex;align-items:baseline;justify-content:center;gap:5px;margin:24px 0 0;}
+.price__lbl{font-weight:700;color:var(--ink);font-size:clamp(16px,4.4vw,20px);}
+.price__yen{font-weight:700;color:var(--ink);font-size:clamp(22px,5.6vw,28px);}
+.price__tax{font-size:12px;color:var(--muted);align-self:flex-end;margin-bottom:10px;}
+.offer__menu{text-align:center;margin:14px 0 0;font-size:clamp(14px,3.8vw,16px);color:var(--body);font-weight:500;}
+/* 毎月5名限定バナー（大々的に） */
+.limited{max-width:440px;margin:16px auto 8px;background:linear-gradient(180deg,#ff8a5f,#e8542a);color:#fff;border-radius:18px;padding:18px 18px 16px;text-align:center;box-shadow:0 14px 30px rgba(216,74,30,.34);}
+.limited__cap{display:block;font-size:clamp(12px,3.5vw,14px);font-weight:700;letter-spacing:.02em;}
+.limited__main{display:flex;align-items:baseline;justify-content:center;gap:2px;font-family:var(--serif);font-weight:700;font-size:clamp(22px,6vw,30px);line-height:1;margin:8px 0 4px;}
+.limited__num{font-size:clamp(60px,18vw,94px);margin:0 5px;text-shadow:0 2px 6px rgba(0,0,0,.12);}
+.limited__unit{font-size:clamp(22px,6vw,30px);}
+.limited__only{display:block;font-family:var(--serif);font-weight:700;font-size:clamp(19px,5.4vw,25px);letter-spacing:.12em;}
+
+/* ---------- アクセス ---------- */
+.map{margin:26px 0 0;border-radius:12px;overflow:hidden;aspect-ratio:16/10;background:#e6f1f9;}
+.map iframe{width:100%;height:100%;border:0;display:block;}
+.info{width:100%;border-collapse:collapse;margin:22px 0 0;font-size:14px;}
+.info th,.info td{border-bottom:1px solid #e6eef5;padding:13px 6px;text-align:left;vertical-align:top;}
+.info th{width:5.5em;color:var(--sky);font-weight:700;white-space:nowrap;}
+.info td{color:var(--ink);}
+
+/* ---------- Footer ---------- */
+.ft{background:linear-gradient(160deg,var(--navy1),var(--navy2));color:var(--ink);text-align:center;padding:42px var(--pad) 50px;}
+.ft__name{font-family:var(--serif);font-weight:700;font-size:16px;color:var(--ink);}
+.ft__tag{margin:8px 0 0;color:var(--body);font-size:13px;}
+.ft__copy{margin:18px 0 0;color:var(--muted);font-size:11px;}
+
+/* ---------- Sticky CTA ---------- */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;
+  justify-content:space-between;gap:12px;background:#fff;border-top:1px solid #dcebf6;
+  padding:9px var(--pad);max-width:var(--wrap);margin-inline:auto;box-shadow:0 -6px 20px rgba(23,80,130,.14);}
+.sticky__price{color:var(--ink);font-size:12px;}
+.sticky__price b{color:var(--gold);font-size:16px;margin:0 2px;}
+.sticky__price small{font-size:10px;color:var(--muted);}
+.sticky__btns{display:flex;flex-direction:row;gap:6px;flex:1;min-width:0;}
+.sticky .btn{flex:1;min-width:0;padding:11px 6px;font-size:clamp(11px,3vw,13px);white-space:nowrap;margin:0;box-shadow:none;}
+
+/* ---------- Responsive ---------- */
+@media (max-width:360px){
+  .zeros{gap:8px}
+}
+@media (min-width:720px){
+  body{background:#e7eff7;}
+  .page{max-width:680px;margin:0 auto;box-shadow:0 16px 60px rgba(23,80,130,.18);}
+  .sticky{max-width:680px;}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn{transition:none}
+}
+
+/* ---------- こんなお悩み チェックリスト ---------- */
+.worries{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:10px;text-align:left;}
+.worries li{display:flex;align-items:flex-start;gap:12px;background:#f4fbff;border:1px solid #cfe8f7;
+  border-radius:12px;padding:14px 16px;font-size:clamp(14px,3.9vw,15.5px);font-weight:500;
+  color:var(--ink);line-height:1.55;box-shadow:0 4px 14px rgba(23,80,130,.05);}
+.worries__ck{flex:none;width:24px;height:24px;border-radius:6px;border:2px solid var(--sky);
+  background:#fff;position:relative;margin-top:1px;}
+.worries__ck::after{content:"";position:absolute;left:7px;top:3px;width:6px;height:11px;
+  border:solid var(--sky);border-width:0 3px 3px 0;transform:rotate(45deg);}
+
+/* ヘアサイクル 強調メッセージ（大きめ） */
+.cycle-msg{font-size:clamp(18px,5.4vw,23px);line-height:1.7;color:var(--ink);}
+.cycle-msg b{font-weight:700;}
