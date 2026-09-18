@@ -257,5 +257,12 @@ img{max-width:100%;display:block}
 .cycle-msg b{font-weight:700;}
 
 /* 根本ケア：3つの円（ベン図）画像 */
-.method-venn{margin:24px auto 0;max-width:560px;}
+.method-venn{margin:44px auto 0;max-width:560px;}
 .method-venn img{width:100%;height:auto;display:block;}
+
+/* 違い：比較表画像（横長なのでモバイルでは幅いっぱいに） */
+.diff-table{margin:26px auto 0;max-width:620px;}
+.diff-table img{width:100%;height:auto;display:block;}
+@media (max-width:600px){
+  .diff-table{margin-left:-8px;margin-right:-8px;width:calc(100% + 16px);max-width:none;}
+}
