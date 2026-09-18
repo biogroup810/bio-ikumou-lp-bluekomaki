@@ -255,3 +255,7 @@ img{max-width:100%;display:block}
 /* ヘアサイクル 強調メッセージ（大きめ） */
 .cycle-msg{font-size:clamp(18px,5.4vw,23px);line-height:1.7;color:var(--ink);}
 .cycle-msg b{font-weight:700;}
+
+/* 根本ケア：3つの円（ベン図）画像 */
+.method-venn{margin:24px auto 0;max-width:560px;}
+.method-venn img{width:100%;height:auto;display:block;}
