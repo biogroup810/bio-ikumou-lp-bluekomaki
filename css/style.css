@@ -266,3 +266,7 @@ img{max-width:100%;display:block}
 @media (max-width:600px){
   .diff-table{margin-left:-8px;margin-right:-8px;width:calc(100% + 16px);max-width:none;}
 }
+
+/* SP（スマホ）専用の改行。PC・タブレットでは無効化して不自然な短行を防ぐ */
+.br-sp{display:none;}
+@media (max-width:600px){ .br-sp{display:inline;} }
